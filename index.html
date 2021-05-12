@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Simple typewriter text exercise</title>
+
+    <meta name="description" content="A simple exercise template." />
+    <!-- styles -->
+    <style></style>
+  </head>
+  <body>
+    <h1>Talking to my therapist</h1>
+    <p id="para-0"></p>
+    <p id="para-1"></p>
+    <p id="para-2"></p>
+    <p id="para-3">
+      
+    </p>
+    <p id="para-4"></p>
+    <!-- script -->
+    <script>
+      const text = [
+        "I've been getting trolled this week by an alt-right feminist who calls herself Not Your Whore.",
+        "She's tagged her POV to a story I wrote under the pretense of having been a customer of mine.",
+        "I suspect she's not a person but an organisation.",
+        "I wish that the different branches of feminism could agree to disagree.",
+        "When someone tells me that I'm not entitled to my viewpoints, I feel so powerless."
+      ];
+      let paraCounter = 0;
+      let charCounter = 0;
+      let typeWriterInterval;
+
+      function addLetter() {
+        if (paraCounter < text.length) {
+          const para = document.getElementById("para-" + paraCounter);
+          para.innerHTML = text[paraCounter].slice(
+            0,
+            charCounter + 1
+          );
+          charCounter++;
+          if (charCounter >= text[paraCounter].length) {
+            paraCounter++;
+            charCounter = 0;
+          }
+        }
+        else {
+          for (let i=0; i,text.length; i++){
+            const para = document.getElementById("para-" + i);
+            para.innerHTML = "";
+          }
+          paraCounter = 0;
+          charCounter = 0;
+        }
+        
+      }
+      typeWriterInterval = setInterval(addLetter, 100);
+    </script>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>
+  </body>
+</html>
