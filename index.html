@@ -5,29 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Simple typewriter text exercise</title>
+    <title>constant cravings</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
 
-    <meta name="description" content="A simple exercise template." />
+    <meta name="description" content="a poem" />
     <!-- styles -->
-    <style></style>
+    <style>
+      body {
+        background-color: #F2D4C2;
+        color: #961000;
+        font-family: "Great Vibes", cursive;
+        font-size: 18;
+      }
+    </style>
   </head>
   <body>
-    <h1>Talking to my therapist</h1>
+    <h1>microdose milf fantasy</h1>
     <p id="para-0"></p>
     <p id="para-1"></p>
     <p id="para-2"></p>
-    <p id="para-3">
-      
-    </p>
+    <p id="para-3"></p>
     <p id="para-4"></p>
+    <p id="para-5"></p>
+    <p id="para-6"></p>
+    <p id="para-7"></p>
+    <p id="para-8"></p>
+    <p id="para-9"></p>
+    <p id="para-10"></p>
+    <p id="para-11"></p>
     <!-- script -->
     <script>
       const text = [
-        "I've been getting trolled this week by an alt-right feminist who calls herself Not Your Whore.",
-        "She's tagged her POV to a story I wrote under the pretense of having been a customer of mine.",
-        "I suspect she's not a person but an organisation.",
-        "I wish that the different branches of feminism could agree to disagree.",
-        "When someone tells me that I'm not entitled to my viewpoints, I feel so powerless."
+        "craving measured stare unrelenting probe",
+        "dm deep dive sinking couch cushions never mind daycare",
+        "spike our tempered glass silicone shrouded waters",
+        "kaleidoscopic reflections sideways wet autumn days",
+        "pretend you don't have work i don't have a clock",
+        "what is a body and where does it end",
+        "criss cross tic-tac-toe herringbone imprinted upon downy thighs",
+        "removed from ego bondage sip after sip",
+        "disallowed thoughts funnel to groin",
+        "pressing hands deep inhale a spasm",
+        "a small obliteration another sip in time"
       ];
       let paraCounter = 0;
       let charCounter = 0;
@@ -36,25 +59,20 @@
       function addLetter() {
         if (paraCounter < text.length) {
           const para = document.getElementById("para-" + paraCounter);
-          para.innerHTML = text[paraCounter].slice(
-            0,
-            charCounter + 1
-          );
+          para.innerHTML = text[paraCounter].slice(0, charCounter + 1);
           charCounter++;
           if (charCounter >= text[paraCounter].length) {
             paraCounter++;
             charCounter = 0;
           }
-        }
-        else {
-          for (let i=0; i,text.length; i++){
+        } else {
+          for (let i = 0; i, text.length; i++) {
             const para = document.getElementById("para-" + i);
             para.innerHTML = "";
           }
           paraCounter = 0;
           charCounter = 0;
         }
-        
       }
       typeWriterInterval = setInterval(addLetter, 100);
     </script>
